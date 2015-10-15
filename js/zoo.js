@@ -12,7 +12,7 @@ Zoo.prototype.changeLocation = function(location) {
 };
 
 Zoo.prototype.open = function() {
-  this.status = "open";
+  this.status = "closed";
 };
 
 Zoo.prototype.close = function() {
@@ -22,7 +22,8 @@ Zoo.prototype.close = function() {
 Zoo.prototype.isOpen = function() {
   if(this.status === "open") {
     return "Open!";
-  } else {
+  }
+  else {
     return "closed";
   }
 };
@@ -40,5 +41,6 @@ Zoo.prototype.removeAnimal = function(animal) {
     this.animals.splice(output, 1);
   }
 };
+//can add another expect to check the length of the array to make sure something was added or removed.
 
 module.exports = Zoo;

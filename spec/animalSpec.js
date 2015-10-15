@@ -63,3 +63,4 @@ describe('Animal', function(){
   });
 
 });
+//each "it" uses the condition that is stated in the describe above it. It is local.

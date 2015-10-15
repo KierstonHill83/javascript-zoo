@@ -44,13 +44,14 @@ describe('Zoo', function(){
     });
   });
 
-
+//unclear that the zoo is closed.
   describe('#addAnimal', function(){
     it('should only add an animal to the animals array when the zoo is open', function(){
       zoo.addAnimal(pig);
       index = zoo.animals.length-1;
       expect(zoo.animals[index]).not.toEqual(pig);
     });
+
     it('should add an animal to the animals array', function(){
       zoo.open();
       zoo.addAnimal(pig);
@@ -76,8 +77,11 @@ describe('Zoo', function(){
     it('should remove an animal from the animals array if the zoo is open', function(){
       zoo.open();
       zoo.addAnimal(lion);
+      //expect(zoo.animals).toEqual([lion]);
       zoo.removeAnimal(lion);
       expect(zoo.animals).toEqual([]);
     });
   });
 });
+
+//write the test more clearly. Be more explicit. Make the status of object more clear before starting the test. Write more comments.
